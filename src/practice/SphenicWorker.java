@@ -14,6 +14,7 @@ public class SphenicWorker implements Runnable {
         for(int i = start; i * i <= end; i++){
             if(num% i == 0){
                 count++;
+                num/=i;
                 if(num%i == 0) return false;
             }
         }
