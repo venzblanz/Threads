@@ -11,9 +11,10 @@ public class SphenicWorker implements Runnable {
     }
     private boolean isSphenic(int num) {
         int count = 0;
-        for(int i = start; i * i <= end; i++){
+        for(int i = 2; i * i <= num; i++){
             if(num% i == 0){
                 count++;
+                num/=i;
                 if(num%i == 0) return false;
             }
         }
